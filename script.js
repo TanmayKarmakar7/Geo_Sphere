@@ -50,7 +50,7 @@ async function getData(){
         const countryCard = document.createElement("a");
         countryCard.classList.add("country-card");
 
-        countryCard.href = `/country.html?name=${country.name.common}`;
+        countryCard.href = `./country.html?name=${country.name.common}`;
 
         countryCard.innerHTML = `
             <div class="country-flag">
