@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Nunito", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: whitesmoke;
+}
+a{
+    text-decoration-line: none;
+}
+header{
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+.header-container{
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 15px;  
+}
+header .title{
+    font-weight: 800;
+    font-style: italic;
+}
+header a{
+    color: dodgerblue;
+}
+main{
+    max-width: 1200px;
+    margin: 35px auto;
+}
+.search-filter-container{
+    margin: 50px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-container{
+    background-color: white;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+}
+.search-filter-container input{
+    padding: 7px 10px;
+    border: none;
+    outline: none;
+    width: 225px;
+}
+.filter-region{
+    height: 40px;
+    width: 160px;
+    border: none;
+    border-radius: 7px;
+    padding: 5px 8px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    outline: none;
+}
+.countries-container{
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+.country-card{
+    display: inline-block;
+    width: 260px;
+    background-color: white;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all linear 0.2s;
+    cursor: pointer;
+    color: black;
+    align-self: center;
+}
+.country-card:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+.country-flag{
+    overflow: hidden;
+    width: 100%;
+    height: 160px;
+}
+.country-card img{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: transform linear 0.3s;
+}
+.country-card img:hover{
+    transform: scale(1.06) rotate(2deg);
+}
+.country-details{
+    padding: 10px 15px 25px;
+}
+.country-details h3{
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    margin: 7px 0 14px;
+}
+.country-details p{
+    font-size: 14px;
+    font-weight: 500;
+}
+.country-details p b{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Dark mode */
+body.dark {
+    background-color: #151515;
+    color: whitesmoke;
+}
+header.dark{
+    background-color: #101010;
+}
+.country-card.dark{
+    background-color: #242424;
+    color: whitesmoke;
+}
+.search-container.dark{
+    background-color: #242424;
+    color: whitesmoke;
+}
+.search-container input.dark{
+    background-color: #242424;
+    color: whitesmoke;
+}
+.filter-region.dark{
+    background-color: #242424;
+    color: whitesmoke;
+}
+
+body.dark h1, body.dark .support a {
+    color: #fff;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.checkbox-label {
+    background-color: dodgerblue;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {color: #f1c40f;}
+
+.fa-sun {color: #f39c12;}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+.border-b{
+    border-bottom: 1px solid dodgerblue;
+}
+
+
+@media (width < 600px){
+    .countries-container{
+        justify-content: center;
+    }
+    .search-filter-container{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .search-filter-container input{
+        width: 300px;
+    }
+    .filter-region{
+        width: 345px;
+        padding: 5px 10px;
+    }
+    .country-card{
+        width: 340px;
+    }
+    .country-flag{
+        height: 200px;
+    }
+    .country-details h3{
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .country-details p{
+        font-size: 16px;
+    }
+    .country-details p b{
+        font-size: 17px;
+        font-weight: 800;
+    }
+}
+@media (width < 360px){
+    .search-filter-container input{
+        width: 260px;
+    }
+    .filter-region{
+        width: 305px;
+        padding: 5px 10px;
+    }
+    .country-card{
+        width: 300px;
+    }
+}

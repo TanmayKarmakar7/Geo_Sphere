@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Nunito", sans-serif;
+}
+body{
+    background-color: whitesmoke;
+}
+a{
+    text-decoration-line: none;
+}
+header{
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+.header-container{
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 15px;  
+}
+header .title{
+    font-weight: 800;
+    font-style: italic;
+}
+header a{
+    color: dodgerblue;
+}
+header .mode{
+    font-weight: 700;
+    cursor: pointer;
+}
+
+main{
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+.back-btn{
+    padding: 10px 25px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.back-btn i{
+    margin-right: 5px;
+}
+.country-container{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 35px;
+    margin: 75px 0 0;
+}
+.country-flag{
+    width: 40%;
+    margin-top: 10px;
+}
+.country-flag img{
+    width: 100%;
+    min-height: 300px;
+}
+.country-details{
+    width: 55%;
+}
+.country-details h3{
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.country-details ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.country-details ul li{
+    font-size: 16px;
+    font-weight: 500;
+}
+.country-details ul li b{
+    font-size: 17px;
+    margin-right: 3px;
+}
+.border-countries{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 50px;
+}
+.border-countries p{
+    font-size: 17px;
+    font-weight: 700;
+}
+.border-countries a{
+    padding: 5px 15px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    font-size: 14px;
+    color: black;
+}
+@media (width < 1080px){
+    .country-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+    }
+    .country-flag{
+        width: 80%;
+    }
+    .country-flag img{
+        min-height: 200px;
+    }
+    .country-details{
+        width: 80%;
+    }
+    .back-btn{
+        margin-left: 100px;
+    }
+    .border-countries{
+        margin: 50px 0 20px;
+    } 
+}
+@media (width < 1000px){
+    .back-btn{
+        margin-left: 87.5px;
+    }
+}
+@media (width < 860px){
+    .back-btn{
+        margin-left: 80px;
+    }
+}
+@media (width < 768px){
+    .country-flag{
+        width: 95%;
+    }
+    .country-details{
+        width: 95%;
+    }
+    .back-btn{
+        margin-left: 20px;
+    }
+}
+@media (width < 600px){
+    .country-details ul{
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .back-btn{
+        margin-left: 10px;
+    }
+    .country-details ul li{
+        font-size: 17px;
+        font-weight: 400;
+    }
+    .country-details ul li b{
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+/* Dark mode */
+body.dark {
+    background-color: #151515;
+    color: whitesmoke;
+}
+header.dark{
+    background-color: #101010;
+}
+.back-btn.dark{
+    background-color: #101010;
+    color: whitesmoke;
+    border: 0.1px solid dodgerblue;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.checkbox-label {
+  background-color: dodgerblue;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {color: #f1c40f;}
+
+.fa-sun {color: #f39c12;}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+
+.border-b{
+    border-bottom: 1px solid dodgerblue;
+}
