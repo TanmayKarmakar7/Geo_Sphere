@@ -72,6 +72,7 @@ main{
 .country-flag img{
     width: 100%;
     min-height: 300px;
+    max-height: 400px;
 }
 .country-details{
     width: 55%;
